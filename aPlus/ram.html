@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RAM</title>
+</head>
+<body>
+<!--
+    <h2> </h2>
+    <p>
+
+    </p>
+
+    <h3> </h3>
+    <p>
+
+    </p>
+
+    <h4> </h4>
+    <p> 
+    
+    </p>
+-->
+
+    <h2> RAM (Random Access Memory) </h2>
+    <p>
+        RAM is primary memory or temporary storage <br>
+        In order for a program to run it needs to be loaded into RAM first <br>
+        Increasing RAM will make the computer run faster <br><br>
+
+        Requires constant electrical power to store the data <br>
+        RAM is stored on the motherboard in modules called DIMMs <br>
+        DIMMs come in different memory sizes <br>
+        Range anywhere from 128 MB to 64 GB per DIMM <br>
+    </p>
+
+    <h3> Ram Types </h3>
+    <h4> DRAM - Dynamic RAM </h4>
+    <p> 
+        Contains capacitors <br>
+        Has to be refreshed often <br>
+    </p>
+
+    <h4> SRAM - Static RAM</h4>
+    <p> 
+        Uses transistors <br>
+        Does NOT have to be refreshed <br>
+        Faster than DRAM <br>
+        Very expensive <br>
+        Examples: Memory cache used by the CPU <br>
+    </p>
+
+    <h4> SDRAM - Synchronous Dynamic RAM </h4>
+    <p> 
+        Used today in RAM DIMMs <br>
+        Difference between SDRAM vs DRAM: <br>
+        DRAM - Operates Asynchronously with the system clock<br>
+        SDRAM - Operates synchronously with the system clock<br>
+        All signals are tied to the system clock for a better controlled timing <br>
+    </p>
+
+    <h3> RAM Speed </h3>
+    <h4> PC-100</h4>
+    <p>
+        100 Mhz = The speed at which it operates <br>
+        8 byte wide bus <br>
+        Total bandwidth = 100 Mhz * 8 bytes = 800 Mb/s <br>
+    </p>
+
+    <h4> PC-133</h4>
+    <p>
+        133 Mhz = The speed at which it operates <br>
+        8 byte wide bus <br>
+        Total bandwidth = 133 Mhz * 8 bytes = 1066 Mb/s <br>
+    </p>
+
+    <h3> DDR - Double Data Rate</h3>
+    <p>
+        Sends double the amount of data in each clock signal <br>
+        DDR uses the total bandwidth in its label name <br>
+    </p>
+
+    <h4> PC - 2700</h4>
+    <p>
+        333 Mhz clock speed <br>
+        8 byte wide bus <br>
+        Total bandwidth = 333 Mhz * 8 = 2700 Mb/s
+    </p>
+
+    <h4> PC - 3200</h4>
+    <p>
+        400 Mhz clock speed <br>
+        8 byte wide bus <br>
+        Total bandwidth = 400 Mhz * 8 = 3200 Mb/s
+    </p>
+
+    <h3> DDR2 </h3>
+    <p>
+        A newer technology that has succeeded DDR <br>
+        Faster than DDR <br>
+        Allows for higher bus speeds <br>
+        Uses less power than DDR <br>
+        Has 240 pins vs 180 pins (DDR) <br>
+    </p>
+
+    <h3> DDR3 </h3>
+    <p>
+        Twice as fast as DDR2 <br>
+        Bandwidths of over 12800 Mb/s <br>
+        Has 240 pins <br>
+        Bottom notches are in different places <br>
+        Not interchangeable with DDR or DDR2 <br>
+        DDR3 Examples: PC3 - 8500, PC3 - 12800 <br>
+    </p>
+
+    <h3>RDRAM (Rambus Dynamic Ram)</h3>
+    <h4>RIMM - Rambus Inline Memory Module</h4>
+    <p>
+        Has 184 pins <br>
+        Look similar to DIMMs <br>
+        Bottom notches are in the center of the module <br>
+        Debuted in 1999 <br>
+        Was a breakthrough in the speed of memory <br>
+        Has quickly fallen behind due to advancment of technology in DIMMs <br><br>
+
+        RDRAM speed was at 800 Mhz (SDRAM speed was 133 Mhz) <br>
+        Only had a 2 byte wide bus (SDRAM has an 8 byte wide bus) <br>
+        800 Mhz * 2 bytes = 1600 Mb/s <br><br>
+
+        RIMM technology was designed to work with a continuous signal <br>
+        All the memory slots on the motherboard must be used to work properly <br>
+        C-RIMM: Continuity RIMM (dummy RIMM) can be used instead of RIMMS <br>
+    </p>
+
+    <h3> Dual Channel Mode </h3>
+    <p>
+        Requires a pair of identical DIMMs installed on the motherboard <br>
+        Allows the memory controller the ability to communicate with 2 DIMMs simultaneously <br>
+        Increase the speed of accessing the memory <br><br>
+
+        Motherboard must be equipped to work in dual channel mode <br>
+        DIMMs must be identical to each other in speed, size, and features <br>
+        DIMMs must be inserted into the motherboard in a specific slot configuration <br>
+    </p>
+
+    <h3> Triple Channel Mode </h3>
+    <p>
+        Not very common <br>
+        Allows the memory controller the ability to communicate with 3 DIMMs at the same time <br>
+        Modern motherboards have a 64 bit architecture <br>
+        Single channel: Transfers 64 bits of data at a time <br>
+        Dual channel: Transfers 128 bits of data at a time <br>
+        Triple channel: Transfers 192 bits of data at a time <br>
+        DIMMS have to be inserted into the same color slots and must be identical in order for them to work properly <br>
+    </p>
+
+    <h3> Single Sided vs Double Sided</h3>
+    <p>
+        Doesn't necessarily refer to the physical location of the memory chips that are on the sides of the memory module <br>
+        It refers to the groups of memory chips that a memory controller accesses <br>
+        For example: Double sided RAM has two groups of memory chips <br>
+        Double sided memory means that the memory controller sees these two groups of memory chips separately <br><br>
+
+        Single sided RAM has one group of memory chips <br>
+        With single sided RAM, the memory controller can access it as one group <br>
+        Which makes single sided RAM faster than double sided RAM <br>
+
+    </p>
+
+    <h3> ECC Memory (Error Correcting Code) </h3>
+    <p>
+        Detects if the data was correctly processed by the memory module <br>
+        Makes a correction if it needs to <br>
+        Non ECC - 8 memory chips <br>
+        ECC - 9 memory chips <br>
+        Most RAM modules today are non-ECC <br>
+        ECC memory is mostly used in servers <br>
+    </p>
+
+    <h3> Buffered vs Unbuffered RAM </h3>
+    <p>
+        Buffered RAM (registered RAM) is made to add stability to RAM <br>
+        Adds an extra register between the RAM and the memory controller <br>
+        Stores (buffers) data before it gets sent to the CPU <br>
+        Adds stability and reliability in computer systems that have a lot of memory installed <br>
+        Used mainly in servers <br>
+    </p>
+
+    <h3> SODIMM (Small Outline Dual Inline Memory Module) </h3>
+        RAM that is used in smaller devices, such as laptops <br>
+        Comes in different types, suchas DDR, DDR2, DDR3 <br>
+</body>
+</html>
