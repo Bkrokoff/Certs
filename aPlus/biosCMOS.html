@@ -18,9 +18,73 @@
 -->
 
     <h2> BIOS / CMOS </h2>
+    <h3> BIOS (Basic Input Output System) </h3>
     <p>
+        The BIOS is software that is built into the motherboard that initializes the computers peripherals <br>
+        Such as the keyboard, mouse, video card, optical drives, etc <br>
+        After initialization, it then searches for a boot device (OS) <br><br>
 
+        The BIOS software is stored on the BIOS chip on the motherboard <br>
+        The BIOS chip is non-volatile <br>
+        Popular vendors of BIOS chips are American Megatrends and Pheonix Technologies <br>
     </p>
 
+    <h3> CMOS Battery </h3>
+    <p>
+        Computers need to maintain certain settings (date & time, hardware settings) that are stored on the CMOS chip <br>
+        The CMOS (Complimentary Metal Oxide Semiconductor) battery maintains these settings <br>
+        A small button cell battery located on the motherboard <br>
+    </p>
+
+    <h3> Boot Priority </h3>
+    <p>
+        When you turn on a computer, the computer does a POST - Power On Self Test - to ensure that everything is working <br>
+        After POST has passed, the BIOS searches for something to boot from (OS) <br>
+        You can change the boot priority in CMOS in any order you want <br>
+        After you make the change, you must save the settings and the settings will take affect after the computer is rebooted <br>
+    </p>
+
+    <h3> BIOS </h3>
+    <p>
+        You can set the date and time in BIOS <br>
+        You can also enable or disable certain devices in the BIOS <br>
+        Allows you to modify the CPU clock speed <br>
+        You can monitor the temperature of the CPU with the BIOS <br>
+        Virtualization can be enabled or disabled in the BIOS <br>
+        A BIOS password protects against unauthorized users <br>
+        Prevents changes to the BIOS and from the computer booting <br>
+    </p>
+
+    <h3> POST (Power on Self Test) </h3>
+    <p>
+        The POST tests the computer to make sure all the requirements are met and the hardware is working correctly <br>
+        If the computer passes the test, it will make a short single "beep" <br>
+        No beep or multiple beeps, indicates a problem <br>
+        The computer will generate a beep code to help you pinpoint the problem <br>
+        Refer to the manufacturers documentation to find a list of beep codes <br>
+    </p>
+
+    <h3> BIOS </h3>
+    <p>
+        Some BIOS systems detect if the computer case has been opened <br><br>
+
+        LoJack - Service that can locate your computer if it has been stolen <br>
+    </p>
+
+    <h3> UEFI (Unified Extensible Firmware Interface) </h3>
+    <p>
+        UEFI (NEW) <br>
+        More modern BIOS <br>
+        User friendly, graphical user interface <br>
+        Recognizes larger storage devices <br>
+        Able to use a mouse in the interface <br><br>
+
+        BIOS (OLD) <br>
+        Blue screen that resembles the BSOD (Blue Screen of Death) <br>
+        Cannot recognize larger storage drives <br>
+        Only able to use a keyboard <br><br>
+
+        Secure Boot - built in new feature in UEFI that stops any digitally unsigned drivers from loading and helps to stop malicious software such as rootkits <br>
+    </p>
 </body>
 </html>
