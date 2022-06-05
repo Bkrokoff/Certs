@@ -19,9 +19,59 @@
 
     <h4> Work Group </h4>
     <p> A workgroup is a peer-to-peer network using Microsoft software. <br>
+        Users can use his login credentials only on his or her system and not others. <br>
+        It holds an distributed administration wherein each user can manage his machine independently <br>
         A workgroup allows all participating and connected systems to access shared resources such as files, system resources and printers.</p>
     <img src="./images/activeDirectory/Workgroup.PNG" width="300px" height="250px">
     <br>
+
+    <h4> Directory Server (Domain Server) </h4>
+    <p>
+        Domain is a client/server network where user can login from any device of the office. Also known as Remote login. <br>
+        It has a centralized administration and all devices can be managed from a centralized device. <br>
+        It prefers a centralized storage and all the users data is stored at a centralized storage device which can be NAS or SAN. <br><br>
+        A client-server network has clients (workstations) as well as a server (or many servers) <br>
+        Clients - Computer A, Computer B, Laptop A, etc. <br>
+        File Server / Directory Server - Manages user accounts and access controls <br>
+    </p>
     <img src="./images/activeDirectory/ClientServerNetwork.PNG" width="300px" height="250px">
+
+    <h3> What is Active Directory? </h3>
+    <p>
+        It's a directory service available with the Windows Server platforms <br>
+        It stores information in a central database and allows users to have a single user account (called a domain user account) for the network <br>
+    </p>
+    <img src="./images/activeDirectory/activeDirExample.PNG" width="450px" height="400px">
+
+    <h4> Creating a Domain Controller </h4>
+    <p>
+        Install "Active Directory Domain Services" on Domain Controller <br>
+        Make sure to promote the server to a domain controller <br><br>
+
+        Add a new forest (First Step when creating domain) <br> 
+        Root Domain Name Example: <br>
+        jss9.jobskillshare.org <br>
+
+        Containers are folders that we did not create <br>
+        Organizational Units have icons in the folder <br>
+    </p>
+    <img src="./images/activeDirectory/ADFolders.PNG" width="250px" height="300px">
+
+    <p> Add User to Active Directory: <br>
+        Click on folder --> New --> Add User <br>
+        Click in whitespace --> New --> Add User <br>
+        Click on icon in toolbar to add user <br>
+    </p>
+
+    <p> How to add user to specific domain: <br>
+        Right Click User --> Properties --> Member Of --> Add --> Type in domain name <br>
+        User will be given the permissions of the domain group 
+    </p>
+
+    <p> Special Notes: <br>
+        Ipconfig --> Find IP of machine in command prompt
+        Domain IP Address = IPv4 Address <br>
+    </p>
+    
 </body>
 </html>
