@@ -9,6 +9,52 @@
     <p> 
         Based on Layer 3 of <a href="tcpIP.html"> TCP/IP </a> - Network Layer
     </p>
+
+    <h3> What is an IP Address </h3>
+    <p>
+        An IP Address is a unique identifier assigned to each device connected to a computer network (Like a digital address) <br>
+        IPv4 address - 32 bit address <br>
+        4 sections called octets <br>
+        Each octet can contain any number between 0-255 <br><br>
+
+        192.168.32.152 <br><br>
+
+        Network section is first 3 octets | Host section is last octet <br>
+        A subnet mask is used to identify the network section and the host section of the address <br>
+        Subnet mask example: 255.255.255.0
+    </p>
+
+    <h3> Address Classes </h3>
+    <p>
+        Class A <br>
+        1.0.0.0 - 126.255.255.255 <br>
+        Subnet: 255.0.0.0 <br>
+        Last 3 octets are available for host allocation <br>
+        Possible Hosts: 16,777,214 <br><br> 
+
+        Class B <br>
+        128.0.0.0 - 191.255.255.255 <br>
+        Subnet: 255.255.0.0 <br>
+        Last 2 octets are available for host allocation <br>
+        Possible Hosts: 65,534 <br><br>
+
+        Class C <br>
+        192.0.0.0 - 223.255.255.255 <br>
+        Subnet: 255.255.255.0 <br>
+        Last octet is available for host allocation <br>
+        Possible Hosts: 254 <br><br>
+
+        Small sections are carved out from each class and are called private IP addresses <br>
+        Public addresses need to be unique, but private addresses can be used over and over again <br>
+        Private IP addresses cannot be used over the internet <br>
+        Instead of using each device as a public IP, we connect private IP's to the public ones provided to us by ISPs <br>
+        
+    </p>
+
+    <p>
+        Special Notes:
+        IPv6 was invented because every address on IPv4 was allocated <br>
+    </p>
     
     <a href="https://www.youtube.com/watch?v=LIzTo6e4FgY"> Youtube Link </a> <br>
     <a href="./index.html"> Go Back </a>

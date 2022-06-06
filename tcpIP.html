@@ -28,18 +28,27 @@
     <h4> Transport Layer </h4>
     <p>
         Responsible for maintaining end-to-end communications across the network <br>
+        TCP, UDP <br>
     </p>
     <h4> Network Layer </h4>
     <p>
-
+        IP, Routers <br>
     </p>
     <h4> Data Link </h4>
     <p>
-
+        Ethernet, Switches <br>
     </p>
     <h4> Physical Layer </h4>
     <p>
+        Cables, NIC (Network Interface Cards)
+    </p>
 
+    <h3> Real World Example: </h3>
+    <p>
+        Start with application data at layer 5 (data) <br>
+        Then is is passed down to layer 4 (tcp) | Called a segment <br>
+        Then it is passed down to layer 3 (network) - We add the IP header containing the source and destination IP address | Called a packet <br>
+        Then is is passed down to layer 2 (data link) - Contains the destination and source MAC address | Called a frame <br>
     </p>
 
    <p> Special Notes:
