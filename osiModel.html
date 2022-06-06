@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>OSI Model</title>
+</head>
+<body>
+
+    <!-- <h3> </h3>
+    <p>
+    
+    </p>    
+    -->
+
+    <h2> OSI Model </h2> 
+
+    <h3> 7. Application </h3>
+    <p>
+        SMTP, FTP, Telnet <br>
+    </p>  
+
+    <h3> 6. Presentation </h3>
+    <p>
+        Format Data, Encryption <br>
+    </p>  
+
+    <h3> 5. Session </h3>
+    <p>
+        Start & Stop Sessions <br>
+    </p>  
+
+    <h3> 4. Transport </h3>
+    <p>
+        TCP (error handling & sequencing to ensure data is not lost), UDP, Port Numbers <br>
+    </p>  
+
+    <h3> 3. Network </h3>
+    <p>
+        IP Address, Routers <br>
+    </p>  
+
+    <h3> 2. Data Link </h3>
+    <p>
+        MAC Address, switches <br>        
+    </p> 
+
+    <h3> 1. Physical </h3>
+    <p>
+        Cable, Network Interface Cards, Hubs <br>
+        Carries data across physical hardware <br>
+    </p>
+    <p>
+        All People Seem To Need Data Processing <br>
+    </p>
+
+    <h3> Real World Example </h3>
+    <h4> Sending Steps </h4>
+    <p>
+        Step 1. Application Layer - Gets ready to send email using SMTP (Simple Mail Transfer Protocol) <br>
+        Step 2. Presentation Layer - Data is formatted in a way the receiving device will understand (ASCII) <br>
+        Step 3. Session Layer - Session for receiving mail server is started <br>
+        Step 4. Transport - Decides to use TCP or UDP to make sure every packet is delivered | Source and destination port added to data <br>
+        Step 5. Network - IP address of the mail server is added as the destination | Source IP address is also added to the data <br>
+        Step 6. Data - The MAC address of the router and the source MAC address of the host is added to the data <br>
+        Step 7. Physical - The data is sent out on the network using ethernet <br>
+    </p>
+
+    <h4> Receiving Steps </h4>
+    <p>
+        Steps from above are done in reverse, starting from the bottom up <br> 
+    </p>
+
+    <h3> Troubleshooting </h3>
+    <p>
+        Layer 1 (Physical) - Are all the cables plugged in | Is the network card functioning | Faulty Cable  <br>
+        Layer 2 (Data) - Maybe a switch has gone bad <br>
+        Layer 3 (Network) - Is the router functioning | Do I have the right IP address <br>
+        Process continues from there... 
+    </p>
+
+    <a href="https://www.youtube.com/watch?v=LANW3m7UgWs&list=PLF1hDMPPRqGxpYdo0ctaa7MxfOi9vjs1u&index=4"> Youtube Link </a> <br>
+    <a href="./index.html"> Go Back </a>
+</body>
+</html>
