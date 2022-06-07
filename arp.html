@@ -6,6 +6,52 @@
 </head>
 <body>
     <h2> ARP (Address Resolution Protocol) </h2>
+
+    <p>
+        Used to resolve IP addresses to MAC addresses <br>
+        The <a href="">MAC address</a> is the physical address of the device <br>
+        Devices need the MAC address for communication on a local area network <br>
+        Devices use ARP to acquire the MAC address for a device <br>
+    </p>
+
+    <h3> Example </h3>
+    <p>
+        An IP address is used to locate a device on a network <br>
+        A MAC address is what identifies the actual device <br>    
+    </p>
+
+    <p>
+        In order to find the MAC address, computer A will first look at its internal list, called an ARP cache <br>
+        You can find your ARP cache by typing "arp -a" into command prompt <br><br>
+
+        Computer A will send a broadcast out on the network asking every device which computer has the IP address that computer A needs to send data to <br>
+        Then the computer with the matching IP address will respond back and tell computer A its MAC address <br>
+        Once computer A receives the MAC address communication can now take place between the two <br>
+        Once it has the MAC address it will be stored in the ARP cache <br>
+
+    </p>
+
+    <img src="./images/misc/arpExample.JPG"> <br><br>
+
+    <h3> ARP Cache </h3>
+    <p>
+        The ARP cache (table) is used to make a network more efficient <br>
+        It stores IP address to MAC address associations <br><br>
+
+        There are two different types of ARP entries: Dynamic and Static <br><br>
+
+        Dynamic <br>
+        A dynamic entry is created automatically when a device sends out a broadcast massage out on the network <br>
+        Dynamic entries are not permanent. They are flushed out periodically <br><br>
+
+        Static <br>
+        A static entry is where someone manually enters an IP to MAC address association using the ARP command line utility <br>
+        Static entries are often used to reduce any unnecessary ARP broadcast traffic on a network <br>
+        To create a static entry: <br>
+        arp -s [IP address] [MAC address] <br>
+    </p>
+
+    <a href="https://www.youtube.com/watch?v=cn8Zxh9bPio"> Youtube Link </a>
     <a href="./index.html"> Go Back </a><br>
 </body>
 </html>
