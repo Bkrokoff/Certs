@@ -8,9 +8,33 @@
     <h2> Default Gateway</h2>
     <p>
         A default gateway is a device that forwards data from one network to another <br>
-        A majority of the time this is going to be a router <br>
+        A majority of the time this is going to be a router <br><br>
+
+        A default gatway let's devices from one network, communicate with devices on another network <br>
+        "Default" means that the designated device is the first option that's looked upon when data needs to exit the network <br> 
     </p>
 
-    <img src="./images/misc/defaultGateway.JPG" width="400px" height="200px">
+    <img src="./images/misc/defaultGateway.JPG" width="500px" height="300px">
+
+    <p>
+        If the computers on the left-hand side wanted to communicate with each other, they would communicate through the switch <br>
+        They can do this because they are all on the same network - The data does not have to exit the network and go through the default gateway<br>
+    </p>
+
+    <h3> How do computers know if another computer is on their own network or on a different network? </h3>
+    <p>
+        This involves <a href="./ipAddresses.html"> IP addresses</a> and subnets <br><br>
+
+        192.168.0.2 <br>
+        An IP address consists of two parts - A network address and a host address <br><br>
+
+        255.255.255.0
+        A subnet mask reveals how many bits in the IP address are used for the network by masking the network portion of the IP address <br>
+    </p>
+
+    <img src="./images/misc/dGNetwork.JPG" width="500px" height="300px">
+    <p>
+        Since the computers are on different networks - the computer will send out an <a href="./arp.html"> ARP</a> broadcast and ask for the <a href="./macAddress.html">mac address</a> of the default gateway and not the mac address of the computer <br>
+    </p>
 </body>
 </html>
