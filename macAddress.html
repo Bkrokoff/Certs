@@ -9,6 +9,78 @@
 
     <p>
         A MAC (Media Access Control) address is an identifier that every network device uses to uniquely identify itself on a network <br>
+        No two devices anywhere in the world will have the same MAC address <br><br>
+
+        00-04-5A-63-A1-66 <br><br>
+
+        It is made up of a 6 byte hexadecimal number that is burned into every NIC (network interface card) <br>
+        The first 3 bytes identify the manufacturer of the NIC <br>
+        The last 3 bytes are a unique number from the manufacturer that identifies each device on a network <br><br>
+
+        The MAC address is also referred to as the physical address or the hardware address <br>
+    </p>
+
+    <h3> How it is displayed </h3>
+    <p>
+        Windows - 00-04-5A-63-A1-66 <br>
+        Apple/Linux - 00:04:5A:63:A1:66 <br>
+        Cisco - 0004.5A63.A166 <br>
+    </p>
+
+    <h3> Purpose </h3>
+    <p>
+        The purpose of the MAC address is so network devices can communicate with each other <br><br>
+
+        So what is the purpose of an IP address? <br>
+        Public and private IP addresses can periodically change <br>
+        MAC addresses dont change - they are permanent <br><br>
+
+        A network device needs both an IP address and a MAC address <br>
+        A MAC address is used to identify a device - an IP address is used to locate a device <br>
+
+    </p>
+
+    <img src="./images/misc/macAddress.JPG" height="300px" width="600px"> <br>
+
+    <h3> Example </h3>
+    <p>
+        What if computer A wanted to communicate with computer B? <br>
+        First computer A is going to inspect computer Bs IP address to see if it is on the same network <br>
+        It knows it is on the same network since their IP is in the same group <br>
+        In order to get computer B's MAC address, computer A sends our an <a href="./arp.html">ARP</a> (Address Resolution Broadcast) <br>
+        Once computer B tells computer A its mac address communication can finally take place <br>
+
+    </p>
+
+    <img src="./images/misc/macAddressExample.JPG" height="300px" width="600px"> <br>
+
+    <h3> Example 2 </h3>
+    <p>
+        What if computer A wants to go to google.com? <br>
+        Computer A will begin by typing google.com into a web browser <br>
+        The DNS will change the domain name into an IP address so that computers can understand it <br>
+        Computer A will realize that the IP address is not in its local network <br><br>
+
+        So the computer will forward that data to its <a href="./defaultGateway.html">default gateway</a> (router) <br>
+        Computer A will then send out an ARP to get the MAC address of the default gateway <br>
+        Once the computer has the MAC address of the default gateway it will send its data to it <br><br>
+
+        The default gateway will then inspect the IP of google.com and it will find the best path for the data to reach the destination <br>
+        So it will forward the data to the next router by obtaining its MAC address with ARP <br>
+        Once it reaches the final router before google.com, the router will inspect the MAC address of google.com and the data will have reached the destination <br>
+    </p>
+
+    <img src="./images/misc/macAddressExample2.JPG" height="300px" width="600px"> <br>
+
+    <h3> How to find your MAC address </h3>
+    <p>
+        Go into command prompt and type: <br>
+
+        Windows - ipconfig /all <br>
+        Linux / MAC - ifconfig <br><br>
+
+        It can also be listed as a physical address <br>
+        A computer can have multiple addresses <br>
     </p>
 
     <a href="./index.html"> Go Back </a><br>
