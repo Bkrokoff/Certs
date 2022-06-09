@@ -14,72 +14,6 @@
 
     <h2> OSI Model </h2> 
 
-    <h3> 7. Application </h3>
-    <p>
-        SMTP, FTP, Telnet <br>
-    </p>  
-
-    <h3> 6. Presentation </h3>
-    <p>
-        Format Data, Encryption <br>
-    </p>  
-
-    <h3> 5. Session </h3>
-    <p>
-        Start & Stop Sessions <br>
-    </p>  
-
-    <h3> 4. Transport </h3>
-    <p>
-        TCP (error handling & sequencing to ensure data is not lost), UDP, Port Numbers <br>
-    </p>  
-
-    <h3> 3. Network </h3>
-    <p>
-        IP Address, Routers <br>
-    </p>  
-
-    <h3> 2. Data Link </h3>
-    <p>
-        MAC Address, switches <br>        
-    </p> 
-
-    <h3> 1. Physical </h3>
-    <p>
-        Cable, Network Interface Cards, Hubs <br>
-        Carries data across physical hardware <br>
-    </p>
-    <p>
-        All People Seem To Need Data Processing <br>
-    </p>
-
-    <h3> Real World Example </h3>
-    <h4> Sending Steps </h4>
-    <p>
-        Step 1. Application Layer - Gets ready to send email using SMTP (Simple Mail Transfer Protocol) <br>
-        Step 2. Presentation Layer - Data is formatted in a way the receiving device will understand (ASCII) <br>
-        Step 3. Session Layer - Session for receiving mail server is started <br>
-        Step 4. Transport - Decides to use TCP or UDP to make sure every packet is delivered | Source and destination port added to data <br>
-        Step 5. Network - IP address of the mail server is added as the destination | Source IP address is also added to the data <br>
-        Step 6. Data - The MAC address of the router and the source MAC address of the host is added to the data <br>
-        Step 7. Physical - The data is sent out on the network using ethernet <br>
-    </p>
-
-    <h4> Receiving Steps </h4>
-    <p>
-        Steps from above are done in reverse, starting from the bottom up <br> 
-    </p>
-
-    <h3> Troubleshooting </h3>
-    <p>
-        Layer 1 (Physical) - Are all the cables plugged in | Is the network card functioning | Faulty Cable  <br>
-        Layer 2 (Data) - Maybe a switch has gone bad <br>
-        Layer 3 (Network) - Is the router functioning | Do I have the right IP address <br>
-        Process continues from there... 
-    </p>
-
-    <hr>
-
     <h3> What is the OSI Model? </h3>
     <p>
         - Open Systems Interconnection Reference Model <br>
@@ -117,10 +51,107 @@
         &emsp; - Run <a href="/glossary.html#L">loopback tests</a>, test/replace cables, swap adapter cards <br><br>
     </p>
 
+    <h3> Layer 2 - Data Link </h3>
+    <p>
+        - The basic network "language" <br>
+        &emsp; - The foundation of communications at the data link layer<br><br>
 
+        - Sometimes called the Data Link Control (DLC) protocols <br>
+        &emsp; - Example of a DLC protocol: <a href="/macAddress.html">MAC</a>(Media Access Control) address on Ethernet <br><br>
+
+        - Sometimes called the "Switching" Layer <br> 
+    </p>
+
+    <img src="./images/DataLinkExample.PNG" height="200px" width="500px">
+
+    <p>
+        - Any communication taking place between these two <a href="/glossary.html#N">NIC's</a> (Network Interface Cards) using those MAC Addresses is referred to as a layer 2 communication <br>
+    </p>
+
+    <h3> Layer 3 - Network Layer </h3>
+
+    <p>
+        - Sometimes called the "Routing" Layer <br><br>
+
+        - Internet Protocol (IP) - Any device making forwarding decisions based on IP addresses is communicating at layer 3 <br><br>
+
+        - Fragments frames to traverse different networks <br><br>
+    </p>
+
+    <h3> Layer 4 - Transport Layer </h3>
+    
+    <p>
+        - Sometimes called the "Post Office" Layer <br>
+        &emsp; - Parcels and Letters <br>
+        &emsp; - Describes how data is being delivered and where data is being delivered into a system <br><br>
+
+        - TCP (Transmission Control Protocol) and UDP (User Diagram Protocol) <br><br>
+
+        - This layer is used when you are accessing a webpage, but the website is so large that data cannot be sent across the network in a single frame <br> 
+        - Instead it is split up into separate frames and sent across the network and then put back together when it reaches the other side <br>
+    </p>
+
+    <h3> Layer 5 - Session Layer </h3>
+
+    <p>
+        - Communication management between devices <br>
+        &emsp; - Start, Stop, Restart <br><br>
+
+        - Control protocols, tunneling protocols used to begin the communication of data between one device and another <br><br>
+    </p>
+
+    <h3> Layer 6 - Presentation Layer </h3>
+    
+    <p>
+        - Character Encoding <br><br>
+
+        - Application Encryption <br><br>
+
+        - Takes the data and puts it into a form that we can understand <br><br>
+
+        - Often combined with application layer <br>
+        &emsp; - The functionality is closely associated with our ability to use these applications <br><br> 
+    </p>
+
+    <h3> Layer 7 - Application Layer </h3>
+    
+    <p>
+        - The layer we see <br><br>
+
+        - HTTP, FTP, DNS, POP3 <br><br>
+    </p>
+
+    <hr>
+
+    <h3> Real World Example </h3>
+    <h4> Sending Steps </h4>
+    <p>
+        Step 1. Application Layer - Gets ready to send email using SMTP (Simple Mail Transfer Protocol) <br>
+        Step 2. Presentation Layer - Data is formatted in a way the receiving device will understand (ASCII) <br>
+        Step 3. Session Layer - Session for receiving mail server is started <br>
+        Step 4. Transport - Decides to use TCP or UDP to make sure every packet is delivered | Source and destination port added to data <br>
+        Step 5. Network - IP address of the mail server is added as the destination | Source IP address is also added to the data <br>
+        Step 6. Data - The MAC address of the router and the source MAC address of the host is added to the data <br>
+        Step 7. Physical - The data is sent out on the network using ethernet <br>
+    </p>
+
+    <h4> Receiving Steps </h4>
+    <p>
+        Steps from above are done in reverse, starting from the bottom up <br> 
+    </p>
+
+    <h3> Troubleshooting </h3>
+    <p>
+        Layer 1 (Physical) - Are all the cables plugged in | Is the network card functioning | Faulty Cable  <br>
+        Layer 2 (Data) - Maybe a switch has gone bad <br>
+        Layer 3 (Network) - Is the router functioning | Do I have the right IP address <br>
+        Process continues from there... 
+    </p>
+
+    <hr>
 
     <a href="https://www.youtube.com/watch?v=LANW3m7UgWs&list=PLF1hDMPPRqGxpYdo0ctaa7MxfOi9vjs1u&index=4"> Youtube Link </a> <br>
     <a href="https://www.youtube.com/watch?v=owDh6FNJUog&list=PLG49S3nxzAnlCJiCrOYuRYb6cne864a7G&index=2"> Messer Video </a> <br>
-    <a href="./index.html"> Go Back </a>
+    <a href="/index.html"> Go Back </a>
 </body>
 </html>
