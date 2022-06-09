@@ -24,3 +24,15 @@
     <p>
 
     </p>
+
+    - <br>
+    &emsp; - <br><br>
+
+GLOSSARY 
+
+
+    <p>
+        <b> </b> - <br>
+        More Information: <a href=""> </a> <br>
+        Mentioned In: <a href=""> </a> <br>
+    </p>
