@@ -6,6 +6,218 @@
 </head>
 <body>
     <h2> Data Communication </h2>
-    <a href="../networkFundamentals/networkFundamentals.html"> Go Back </a><br>
+    
+    <h3>PDU (Protocol Data Unit)</h3>
+
+    <p>
+    
+    <b>Sometimes called Transmission Units because we're taking a little bit of data and transferring it across the network as a single unit </b><br>
+    A different group of data at different OSI layers <br><br>
+
+    <b>For example, ethernet operates on a frame inside data </b><br>
+    Ethernet doesn't care what's inside the frame - it encapsulates all the data that may be underneath it and sends it across the network <br><br>
+
+    <b>(Layer 3) IP operates on a packet of data </b><br>
+    Inside of the packet is TCP data or UDP data, but IP doesn't really care <br><br>
+
+    <b>Where there is a TCP header or a UDP header there will be: </b><br>
+    A TCP segment <br>
+    A UDP datagram <br>
+
+    </p>
+
+    <h3> Encapsulation and Decapsulation </h3>
+
+    <p>
+
+    <b> Refer to Fig. 1</b> <br><br>
+
+    Getting data moved from one part of the network to the other relies on something called a PDU (Protocol Data Unit) <br><br>
+
+    In order to send the application data, we need to transport it across the network using TCP protocol, so we put a TCP header right in front of the application data and send it across using OSI layer 4 (Transport Layer) <br><br>
+
+    We have to have an IP address that is able to send the TCP data and application data inside of it, so an IP header is added to send the information from one IP to another <br><br>
+
+    Lastly, over ethernet we need to have a DLC (Data Link Control), layer 2, frame header. In many cases there is a frame trailer as well to indicate where the end of the frame might be <br>
+    The layer 2 header encapsulates all of the information from within. So in this frame will be an IP header, TCP header, and application data <br><br> 
+
+    </p>
+
+    <figure>
+        <img src="./images/EncapsulationExample.PNG" height="300px" width="500px">
+        <figcaption> Fig. 1 - Encapsulation </figcaption>
+    </figure>
+
+    <p>
+    
+    <b> Refer to Fig. 2 </b> <br><br>
+    We start by encapsulating the data with a TCP header, an IP header, and a frame header/trailer <br><br>
+
+    The information will be sent across the network where it will be received by the destination device <br><br>
+
+    The destination device only needs the application data, so it will begin decapsulating all the extra information by removing the frame headers, the IP header, and the TCP header <br><br>
+    
+    </p>
+
+    <figure>
+        <img src="./images/sendingReceiving.PNG" height="400px" width="800px">
+        <figcaption> Fig. 2 - Encapsulation and Decapsulation </figcaption>
+    </figure>
+
+    <h4> A second Example </h4>
+
+    <figure>
+        <img src="./images/example2.PNG" height="300px" width="600px">
+        <figcaption> Fig. 3 - Example with Layers </figcaption>
+    </figure>
+
+    <p>
+    
+    Header information is important because it tells us how the rest of the data should be processed
+
+    </p>
+
+    <h3> TCP Flags </h3>
+
+    <p>
+
+    <b> Inside the TCP header there is information called the TCP flag - this helps us process the data as its going through the network </b><br><br>
+
+    <b> The header describes or identifies the payload </b> <br>
+    Here's what you're about to see <br><br>
+
+    <b> The TCP header contains important control information </b><br>
+    Includes a set of bits called TCP flags <br>
+    The device that is receiving this data can interpret these bits and understand how to process the data properly (These bits are called control flags) <br><br>
+
+    <b> The flags control the payload </b> <br>
+    SYN - Synchronize sequence numbers <br>
+    PSH - Push the data to the application without buffering <br>
+    RST - Reset the connection <br>
+    FIN - Last packet from the sender <br><br>
+
+    <b> By turning on or off certain flags, we can change how a device may interpret the rest of the data that is being sent using that TCP header </b> <br><br>
+
+    </p>
+
+    <figure>
+        <img src="./images/TCPFlags.PNG" height="300px" width="500px">
+        <figcaption> Fig. 4 </figcaption>
+    </figure>
+
+    <h3> IP Flags </h3>
+
+    <p>
+
+    <b> There are also flags within the IP header </b> <br>
+    Most of these flags deal with the fragmentation of data <br><br>
+
+    <b> There may be times when you want to send traffic across the network, but because of the architecture or design of the network, you're not able to send packets that are very large </b><br>
+    In those cases, you fragment the data to be able to get through smaller size networks <br><br>
+
+    <b> We determine the maximum size that you're able to send using something called a maximum transmission unit </b> <br><br>
+
+    </p>
+
+    <h3> Maximum Transmission Unit (MTU) </h3>
+
+    <p>
+
+    <b> Designates the size of the data that we're able to send through the network without having to fragment any of the information further </b> <br>
+    We don't want to fragment because it slows down the overall flow of traffic, so if you're network is optimized for less fragmentation, you will have a much higher output of traffic <br>
+    We can eliminate any overhead of having to chop the data down, sending it across the network, and rebuilding it when it reaches the other side <br><br>
+
+    <b> Maximum IP packet to transmit </b> <br>
+    But not fragment <br><br>
+
+    <b> Fragmentation slows things down </b><br>
+    Losing a fragment loses an entire packet <br>
+    Requires overhead along the path <br><br>
+
+    <b> Unfortunately, it can be difficult to know the MTU all the way through the path </b><br>
+    Automated methods are often inaccurate <br>
+    Especially when ICMP is filtered <br><br>
+
+    </p>
+
+    <h3> Building an Ethernet Frame </h3>
+
+    <figure>
+        <img src="./images/IPPacket.JPG" height="100px" width="600px">
+        <figcaption> Fig. 5 - IP Packet </figcaption>
+    </figure>
+
+    <p>
+
+    <b> Data from IP header through TCP data is the IP packet </b> <br>
+    Max size of an IP packet is 1500 bytes <br>
+    If there is no fragmentation occurring anywhere on the network, you can send all 1500 bytes through the network without having any data fragmented along the way <br>
+
+    </p>
+
+
+    <h3> What is IP fragmentation? </h3>
+
+    <figure>
+        <img src="./images/ipFragmentation.JPG" height="300px" width="500px">
+        <figcaption> Fig. 6 - IP Fragmentation</figcaption>
+    </figure>
+
+    <p>
+        
+     <b> In this example 16 bytes of data is the MTU supported on this particular network </b> <br>
+    We have 44 bytes of data that needs to be fragmented <br><br>
+
+    <b> The first fragment is 16 bytes, then the second fragment is 16 bytes, while the third fragment is the remaining amount of bytes </b><br><br>
+
+    </p>
+
+    <h3> Troubleshooting MTU </h3>
+
+    <p>
+
+    <b> MTU sizes are usually configured once (when the network is built) </b><br>
+    Based on the size of the network infrastructure and don't change often <br><br> 
+
+    <b> A significant concern for tunneled traffic </b><br>
+    MTU  changes if we have to tunnel any information <br>
+    If you are using a VPN, you may need to set an MTU or ensure it will be set automatically <br>
+    The tunnel may be smaller than your local Ethernet segment <br><br>
+
+    <b> What if you send packets with Don't Fragment (DF) sent? </b> <br>
+    There is a flag in the IP header that will specify whether the information you are sending should be fragmented or not <br>
+    If the data is too large and the DF bit is set, routers will respond back to you and tell you to fragment <br>
+    Hope you get the ICMP message! <br><br>
+
+    <b> Test your network between one device and another to see MTU </b><br>
+    Troubleshoot using ping <br>
+    Ping with DF and force a maximum size of 1472 bytes (Max allowed by ethernet network) <br>
+    1500 bytes - 8 byte ICMP header - 20 bytes IP address = 1472 <br><br>
+
+    &emsp; Windows: ping -f -l 1472 8.8.8.8 <br>
+    &emsp; Linux and macOS: ping -D -S 1472 8.8.8.8 <br><br>
+
+    -f = Don't Fragment <br>
+    -l = Length of data you would like to use in bytes <br>
+    1472 = byte size
+    8.8.8.8 = Googles DNS Server <br><br>
+
+    </p>
+
+    <figure>
+        <img src="./images/commandExample.JPG" height="300px" width="400px">
+        <figcaption> Fig. 7 - Command Example </figcaption>
+    </figure>
+
+    <p>
+
+    If this command was sent over VPN, we would keep lowering the number of bytes until it was finally able to send through the network <br><br>
+
+    </p>
+
+
+    <hr>
+    <a href="https://www.youtube.com/watch?v=jKjVTPpcZT0">Youtube Video</a> <br>
+    <a href="../networkFundamentals/networkFundamentals.html"> Go Back </a><br> <br>
 </body>
 </html>
