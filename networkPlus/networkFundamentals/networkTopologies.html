@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Network Topologies</title>
+</head>
+<body>
+    <h2> Network Topologies</h2>
+
+    <h3> What is a network topology? </h3>
+    <p>
+        A topology is the layout of how a network communicates with different devices <br><br>
+
+        There are a couple of different categories of topologies <br>
+        Wired and wireless <br><br>
+    
+    </p>
+
+
+
+    <h2>Wired Topologies</h2>
+    
+    <h3>Star Topology (Hub and Spoke)</h3>
+
+    <figure>
+        <img src="./images/starTopology.JPG" height="300px" width="400px">
+        <figcaption> Fig. 1 - Star Topology  </figcaption>
+    </figure>
+
+    <p>
+
+    Most common wired topology <br>
+    All computers are connected to a central wiring point, such as a hub or a switch <br><br>
+
+    All data on a star network passes through the central point before continuing to its destination <br><br>
+
+    One of the major benefits of this topology is that if one of the computers failed or if there was a break in the cable, other computers would not be affected because each computer has its own cable connection <br><br>
+
+    A disadvantage is that if the central hub or switch fails, then all the computers on that central point would be affected (Single point of failure)  <br>
+    If this happens the entire network goes down <br><br>
+
+    Used in most large and small networks <br><br>
+
+    </p>
+
+    <h3>Ring Topology</h3>
+
+    <figure>
+        <img src="./images/ringTopology.JPG" height="300px" width="400px">
+        <figcaption> Fig. 2 - Ring Topology  </figcaption>
+    </figure>
+
+    <p>
+    
+    Type of network configuration where each computer is connected to each other in the shape of a closed loop or ring <br><br>
+
+    Every computer in the ring has exactly two neighbors for communication purposes <br><br>
+
+    Each data packet is sent around the ring until it reaches its final destination <br><br>
+
+    This kind of topology is rarely used today <br><br>
+
+    The advantages of a ring topology are that it is easy to install and easy to troubleshoot <br><br>
+
+    However, the disadvantage would be, that if just one of these computers goes down or if there was a single break in the cable, then all data flow would be disrupted <br><br>
+
+    Not used in LANs, but still used in many Metro Area Networks (MANs) and Wide Area Networks (Wans) <br><br>
+
+    It works in these environments because once devices realize that data may not be able to traverse the connection, it will loopback around and travel the other direction on the ring <br><br>
+
+    </p>
+
+    <h3>Bus Topology</h3>
+
+    <figure>
+        <img src="./images/busTopology.JPG" height="300px" width="500px">
+        <figcaption> Fig. 3 - Bus Topology </figcaption>
+    </figure>
+
+    <p>
+
+    The kind of network setup where each of the computers and network devices are connected to a single cable or backbone <br>
+    This backbone is a coaxial cable <br><br>
+
+    They connect to the cable using special connectors called BNC, also known as T connectors <br>
+
+    Advantages - It is fairly cheap and easy to implement <br><br>
+
+    Disadvantage - Requires that the cable is terminated at both ends using terminators <br><br>
+
+    In order for this setup to remain operational, there must not be any open connection, including the ends that attach to the computers <br>
+    If a computer is removed or if the terminators are loose/missing, then the cable would be open and data would bounce back <br>
+    This bounce is known as signal reflection, if this happens data flow would be disrupted <br><br>
+
+    </p>
+
+    <h3>Mesh Topology</h3>
+
+    <figure>
+        <img src="./images/meshTopology.JPG" height="300px" width="400px">
+        <figcaption> Fig. 4 Mesh Topology </figcaption>
+    </figure>
+
+    <p>
+
+    Each computer on the network is connected to every other computer on the network <br><br>
+
+    By having so many connections it handles failure very well <br><br>
+
+    In the illustration there are 4 computers with 3 connections on each computer, so there is 12 connections total <br><br>
+
+    Advantage - High redundancy level. If one or more connections fail, the computers would still be able to communicate with each other <br><br>
+
+    Because of the amount of cabling and network cards that have to be used, mesh topologies can be expensive so they are rarely used on local area networks (LANs) <br><br>
+
+    Mainly used on wide area networks, like the internet <br>
+    Since the internet is made up of numerous routers all over the world that are connected to each other, if a few routers go down data will still be able to transfer through rerouting <br>
+    Internet is very redundant since it uses a mesh topology <br><br>
+
+    </p>
+
+    <h2>Wireless Topologies</h2>
+
+    <h3>Infrastructure Topology</h3>
+
+    <figure>
+        <img src="./images/infrastructureTopology.JPG" height="300px" width="400px">
+        <figcaption> Fig. 5 - Infrastructure Topology </figcaption>
+    </figure>
+
+    <p>
+
+    This topology uses a combination of wired and wireless devices <br><br>
+
+    It is similar to the star topology, where you have wired devices physically connected to the switch, and a wireless access point that's connected by a cable to the same switch <br><br>
+
+    Wireless access point acts like a bridge between the wireless network and the wired network <br><br>
+
+    Infrastructure topology can have multiple wireless access points depending on the needs of the network <br><br>
+
+    </p>
+
+    <h3>Ad Hoc Topology</h3>
+
+    <p>
+
+    Ad Hoc does not rely on any infrastructure, such as cables, routers, servers or wireless access points <br><br>
+
+    All devices in an ad hoc network wirelessly connect to other devices in a simple peer to peer network <br><br>
+
+    Devices connect directly to each other without a centralized device, such as a wifi router or access point <br>
+    Because of this, each device is responsible for its own security and permissions <br><br>
+
+    Ad hocs are useful for setting up a quick wireless network on the fly, where devices can share data without the need of an existing wireless network <br><br>
+
+    </p>
+
+    <h3>Wireless Mesh Topology</h3>
+
+    <figure>
+        <img src="./images/wirelessTopology.JPG" height="300px" width="500px">
+        <figcaption> Fig. 6 - Wireless Mesh Topology </figcaption>
+    </figure>
+
+    <p>
+
+    Similar to wired mesh topologies, where devices are interconnected with each other, except here they are wirelessly connected <br><br>
+
+    In a wireless mesh, each wireless access point will talk to other wireless access points to create a seamless internet connection for wireless devices to connect to  <br><br>
+
+    Device will connect to nearest wireless access point <br><br>
+
+    A wireless mesh topology is very redundant because the internet connections is spread out over many wireless access points <br><br>
+
+    </p>
+
+    <h3>Hybrid Topology</h3>
+
+    <p>
+
+    A combination of one or more physical topologies <br>
+    Most networks are a hybrid <br><br>
+
+    </p>
+
+    <hr>
+    <a href="https://www.youtube.com/watch?v=zbqrNg4C98U">Youtube Video</a> <br>
+    <a href="https://www.youtube.com/watch?v=nKMrAvl960I&list=PLG49S3nxzAnlCJiCrOYuRYb6cne864a7G&index=4">Messer Video</a> <br>
+    <a href="./networkFundamentals.html"> Go Back </a><br><br>
+</body>
+</html>

@@ -36,3 +36,10 @@ GLOSSARY
         More Information: <a href=""> </a> <br>
         Mentioned In: <a href=""> </a> <br>
     </p>
+
+IMAGES
+
+    <figure>
+        <img src="./" height="300px" width="400px">
+        <figcaption> Fig.  </figcaption>
+    </figure>
