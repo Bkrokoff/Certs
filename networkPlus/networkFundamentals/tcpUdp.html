@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> TCP vs UDP </title>
+</head>
+<body>
+    <h2> TCP vs UDP </h2>
+
+    <h3>TCP</h3>
+
+    <p>
+
+    The communication between two computers needs to be “good” and reliable, to guarantee the data is received correctly <br><br>
+
+    TCP (Transmission Control Protocol)  helps ensure no data is missing or out of order <br><br>
+
+    TCP is a connection-oriented protocol, which means that it must first acknowledge a session between the two computers that are communicating <br>
+    It verifies this by using a three-way handshake <br><br>
+
+    First Step - Computer will send a message called SYN <br>
+    Second step - The receiving computer will send back an acknowledgement message, telling the sender it has received the message (SYN ACK) <br>
+    (The SYN ACK message's purpose is not only to acknowledge the client's SYN. This is only the ACK part. The SYN part is the server's own SYN, which is actually what the client ACKnowledges via the final ACK) <br>
+    Third Step - The sending computer sends another acknowledgement message back to the receiver (ACK RECEIVED) <br><br>
+
+    Once this has taken place, the data can be delivered <br><br>
+
+    TCP doesn't guarantee that data arrives at the receiver. It detects when a segment hasn't arrived and resends it. The resent data may also be lost. After a certain number of failed retransmissions of a segment, TCP will give up and abort the connection <br><br>
+
+    </p>
+
+    <h3>UDP</h3>
+
+    <p>
+
+    UDP (User Datagram Protocol) is connection-less, which means it does not establish a connection and it does not guarantee data delivery <br><br>
+
+    Known as the “fire-and-forget” protocol because it sends the data, but it does not care if the data is received at the other end <br><br>
+
+    Since there is less overhead involved in not guaranteeing data delivery UDP is faster than TCP <br><br>
+
+    </p>
+    
+    <hr>
+    <a href="https://www.youtube.com/watch?v=uwoD5YsGACg">Youtube Video</a> <br>
+    <a href="./networkFundamentals.html"> Go Back </a><br><br>
+</body>
+</html>
