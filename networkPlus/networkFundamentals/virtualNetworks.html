@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Virtual Networks</title>
+</head>
+<body>
+    <h2> Virtual Networks </h2>
+    
+    <p>
+        We used to have server farms that would have individual computers and individual servers inside of them (100 individual servers working and connected together over the network) <br><br>
+        
+        With virtual servers we realized we dont need 100 separate physical servers <br>
+        Instead we can create 100 virtual servers that may be located inside one device <br><br>
+    </p>
+
+    <h3>Network Function Virtualization (NFV)</h3>
+
+    <p>
+        If we're replacing physical servers with virtual servers, then we're taking all of our physical network and replacing it with a virtual network, this is called network function virtualization (NFV) <br>
+        We take all of our network devices and the entire network infrastructure, and move it directly into the hypervisor <br><br>
+
+        All of our switching, our routing, our VLANs, our firewalls, and anything else on the network <br>
+        infrastructure, are now contained within this virtual system <br><br>
+
+        Provides us with the same functionality we had when we had physical switches and physical routers <br><br>
+
+        Also provides additional capabilities: <br>
+        When you need a new switch or a new router you simply click a few buttons inside <br>
+        of the hypervisor, and you can drag and drop a brand new router or a brand new switch into your network infrastructure <br>
+        You can add fault tolerance and different monitoring services, all from this network function virtualization <br><br>
+    </p>
+
+    <h3>The Hypervisor</h3>
+
+    <p>
+        Virtual Machine Manager (VMM) <br>
+        Manages the virtual platform and guest operating systems <br><br>
+
+        Hardware Management <br>
+        The hypervisor is responsible for managing access to the CPU, to memory, and to the network for all of those virtual systems <br><br>
+
+        Single Console Control <br>
+        One pane of glass -  instead of visiting all of those individual virtual systems, you simply go to one management screen and you can control everything <br><br>
+    </p>
+
+    <h3>VSwitch</h3>
+
+    <p>
+        We need to have a network that connects all of those virtual machines together <br>
+        We connect that through a vSwitch, or a virtual switch <br><br>
+
+        Virtual Switch <br>
+        Move the physical switch into the virtual environment <br><br>
+
+        Functionality is similar to physical switch <br>
+        Forwarding options <br>
+        Link aggregation <br>
+        Port Mirroring <br>
+        NetFlow <br><br>
+
+        Deploy from the hypervisor <br>
+        This can also be automated through the hypervisor's API so that this can be deployed and removed automatically using orchestration <br><br>
+    </p>
+
+    <h3>Virtual Network Interface Card (vNIC)</h3>
+
+    <p>
+        A virtual machine needs a network interface <br>
+        All of these virtual servers need a vNIC so that they can then communicate out to the rest of the network <br><br>
+
+        Configured and connected through the hypervisor <br>
+        Enables additional features <br>
+        VLAN, aggregation, multiple interfaces <br><br>
+    </p>
+
+
+    <hr>
+    <a href="https://www.youtube.com/watch?v=A29g5-Os-u8&list=PLG49S3nxzAnlCJiCrOYuRYb6cne864a7G&index=7">Messer Video</a> <br>
+    <a href="./networkFundamentals.html"> Go Back </a><br> <br>
+</body>
+</html>
