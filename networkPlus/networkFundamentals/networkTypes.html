@@ -2,10 +2,210 @@
 <html>
 
 <head>
-    <title> </title>
+    <title> Network Types </title>
 </head>
 <body>
     <h2>Network Types</h2>
-    <a href="./networkFundamentals.html"> Go Back </a><br>
+    
+    <p>
+        Network types depend on how large they are and how much of an area they cover geographically 
+    </p>
+
+    <h3>Peer-to-peer Network</h3>
+
+    <figure>
+        <img src="./images/peerToPeer.JPG" height="300px" width="400px">
+        <figcaption> Fig.1 Peer to Peer  </figcaption>
+    </figure>
+
+    <p>
+        With a peer to peer network, there is not a server or a client <br>
+        Instead, every device is a server and a client - everyone talks to everyone <br><br>
+
+        Advantages <br>
+        This is a very easy way to deploy and application <br>
+        Low cost to implement <br><br>
+
+        Disadvantages <br>
+        Difficult to administer this type of system <br>
+        Difficult to secure since application and authentication process is distributed <br><br>
+    </p>
+
+    <h3>Client Server</h3> 
+
+    <figure>
+        <img src="./images/clientServer.JPG" height="300px" width="400px">
+        <figcaption> Fig.2 Client-Server  </figcaption>
+    </figure>
+
+    <p>
+        With client-server communication the responsibilities are split <br>
+        You have individual clients and then you have a centralized server, so when clients need to access data everyone will access the same server <br><br>
+
+        Clients are not communicating with each other directly or through the server <br>
+        All clients talk to the server, then the server talks to the clients <br><br>
+
+        Advantages <br>
+        This gives you very good performance because you have direct connection to the server that you can manage and maintain <br>
+        Allows for easy administration because you can configure application and authentication at the central point where the server is <br><br>
+
+        Disadvantages <br>
+        Cost and complexity <br>
+        There is additional hardware and software that you'll need - Server + a place to store/maintain it <br>
+        A bit complex since you have a centralized server that needs to be administered <br><br>
+    </p>
+
+    <h3>PAN (Personal Area Network)</h3>
+
+    <p>
+        Network that is used on a personal level <br><br>
+
+        It is a small network that is used for connecting devices such as smartphones, tablets, and laptops <br>
+        Connect to each other using wireless technologies: bluetooth, infrared, NFC (near field communication) <br>
+        Can also be connected using a wired connection: USB <br><br>
+
+        Generally used for transferring small files: music, photos, calendar appointments, etc <br><br>
+    </p>
+
+    <h3>LAN (Local Area Network)</h3>
+
+    <p>
+        A group of devices (computers, servers, switches, and printers) that are located in the same building in close proximity to each other <br><br>
+
+        The most common type of LAN is Ethernet LAN, where two or more computers are connected to ethernet cables using a switch <br>
+        Also 802.11 wireless connection<br><br>
+    </p>
+
+    <h3>WLAN (Wireless Local Area Network)</h3>
+
+    <p>
+        Uses wireless communication instead of wired communication <br>
+        A WLAN is a LAN but without using cables (802.11 technologies) <br><br>
+
+        WLAN will typically have a router or a wireless access point for wireless devices to communicate <br><br>
+
+        You can expand coverage with additional access points to span a larger area <br><br>
+    </p>
+
+    <h3>CAN (Campus Area Network)</h3>
+
+    <p>
+        A CAN is an network that joins two or more LANs together within a limited area <br><br>
+
+        For example, a CAN could be a university that has multiple buildings in the same general area that are connected to each other to form a larger network <br><br>
+
+        LAn technologies: fiber connected, high speed ethernet<br>
+        Fiber is often run in the ground without a third party provider <br><br>
+    </p>
+
+    <h3>MAN (Metropolitan Area Network)</h3>
+
+    <p>
+        Larger than a CAN and spans over several buildings in a city or town <br><br>
+
+        MANs are typically connected using high speed connection such as fiber optic cable <br><br>
+
+        It is a high speed network that gives the ability for sharing data and resources within a city, often used by governments <br><br>
+    </p>
+
+    <h3>SAN (Storage Area Network)</h3>
+
+    <p>
+        A special high-speed network that stores and provides access to large amounts of data <br><br>
+
+        A dedicated network that is used for data storage <br><br>
+
+        Consists of multiple disk arrays, switches, and servers <br><br>
+
+        SANs are not affected by network traffic since SANs aren't a part of a LAN, it is partitioned off <br><br>
+    </p>
+
+    <h3>NAS (Network Attached Storage)</h3>
+
+    <p>
+        One of the main reasons for adding connections on local and wide area networks is so user can access their data that is in a central location that is stored on something like a NAS <br><br>
+
+        NAS contains multiple drives that is able to store large amounts of data in a single area <br>
+        NAS can usually access files at the file level - file level access means that any changes made to the file have to be done to the entire files that's located on that device <br><br>
+
+        SAN allows you to make block-level changes so it can be done very quickly and very efficiently compared to a NAS <br><br>
+    </p>
+
+    <h3>WAN (Wide Area Network)</h3>
+
+    <p>
+        Largest type of network consisting of: LANs, CANs, and MANs <br><br>
+
+        It is a network that spans over a large geographical area such as a country, continent, or even the globe <br><br>
+
+        The internet is an example of a WAN <br><br>
+    </p>
+
+    <h3>MPLS (Multiprotocol Label Switching)</h3>
+
+    <figure>
+        <img src="./images/mpls.JPG" height="200px" width="550px">
+        <figcaption> Fig.3 MPLS  </figcaption>
+    </figure>
+
+    <p>
+        This is communication through the WAN, but it uses labels to be able to determine how we route and forward that traffic through the WAN <br><br>
+
+        Advantages <br>
+        We can use almost any type of connection and we can put almost any type of data inside an MPLS network <br>
+        This means that we can send IP traffic, ethernet frames, or any other type of data we'd like through an MPLS network <br><br>
+
+        This makes MPLS relatively easy to get up running and have all our data transferred between two locations <br><br>
+
+        With MPLS we make forwarding decisions based on the label switching <br><br>
+
+        If we have data on one side of the network and we would like to get it to the other side of the MPLS network, we send that data into the first provider edge router that closes to us <br>
+        The edge router will insert a label into the data (pushing) <br>
+        Then it will know how to forward that traffic through the internals of the provider switch network <br>
+        When the data reaches the other side, the label is popped off and the remaining data is sent to the customer edge router <br><br>
+    </p>
+
+    <h3>mGRE (Multipoint Generic Router Encapsulation)</h3>
+
+    <p>
+        With MPLS we have to create an initial configuration that defines where all the different sites may be located and what labels may be used to switch data to those locations <br><br>
+
+        Multipoint Generic Router Encapsulation <br><br>
+
+        Used extensively for Dynamic Multipoint VPN (DMVPN) <br>
+        Common on cisco routers <br><br>
+
+        What's nice about these dynamic connections is they are only created when they're needed <br>
+        Torn down when you don't have any other information you need to send <br><br>
+
+        If there is a break in the connection - your VPN can rebuild itself <br>
+        Remote sites communicate to each other <br><br>
+
+        All of this is considered to be a dynamic mesh, since you can send data to whatever site you would like based on where the data needs to go <br><br>
+
+        More efficient network and only using connectivity when you have to have it <br><br>
+    </p>
+
+    <h3>SD-WAN (Software Defined Networking in a Wide SArea Network)</h3>
+
+    <figure>
+        <img src="./images/sdwan.JPG" height="300px" width="400px">
+        <figcaption> Fig.4 SD-WAN  </figcaption>
+    </figure>
+
+    <p>
+        The SD stands for software-defined which means that our wide area network can be defined however we would like to lay it out <br><br>
+
+        Especially useful if we have cloud-based applications, and you need the network to understand where data needs to go at any particular time <br><br>
+
+        Allows for communicating directly to the cloud instead of going through one central data center <br><br>
+
+        Software defined aspect of SDWAN determines how data is routed and sent based on types of services that are required <br>
+        Makes for more efficient network <br><br>
+    </p>
+
+    <hr>
+    <a href="https://www.youtube.com/watch?v=6a-roIeJ_a4&list=PLG49S3nxzAnlCJiCrOYuRYb6cne864a7G">Messer Video</a><br>
+    <a href="./networkFundamentals.html"> Go Back </a><br><br>
 </body>
 </html>
